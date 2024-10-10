@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const CardDetailsCard = (props) => {
   const { name, carPhoto, description, onClick } = props;
