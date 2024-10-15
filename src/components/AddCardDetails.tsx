@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 export const AddCardDetails = ({ onAdd }) => {
-  const [carName, setCarName] = useState("Jonga");
+  const [name, setName] = useState("Jonga");
   const [description, setDescription] = useState("The best jeep in the world");
-  const [carImage, setCarImage] = useState(
+  const [carPhoto, setCarPhoto] = useState(
     "https://stimg2.cardekho.com/images/carNewsimages/userimages/650X420/24509/1571988914835/GeneralNews.jpg"
   );
 
   console.log({
-    carName,
+    carName: name,
     description,
-    carImage,
+    carImage: carPhoto,
   });
 
   return (
@@ -20,9 +20,9 @@ export const AddCardDetails = ({ onAdd }) => {
         <input
           className="border-2 border-gray-300"
           type="text"
-          value={carName}
+          value={name}
           onChange={(event) => {
-            setCarName(event.target.value);
+            setName(event.target.value);
           }}
         />
         <label>Description</label>
@@ -38,18 +38,18 @@ export const AddCardDetails = ({ onAdd }) => {
         <input
           className="border-2 border-gray-300"
           type="text"
-          value={carImage}
+          value={carPhoto}
           onChange={(event) => {
-            setCarImage(event.target.value);
+            setCarPhoto(event.target.value);
           }}
         />
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={() => {
             onAdd({
-              carName,
-              carImage,
+              name,
               description,
+              carPhoto,
             });
           }}
         >

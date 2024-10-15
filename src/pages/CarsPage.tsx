@@ -28,12 +28,18 @@ const CarsPage = () => {
               name={car.name}
               carPhoto={car.carPhoto}
               description={car.description}
+              onDelete={() => {
+                const updatedCars = cars.filter((_car) => {
+                  return _car.name !== car.name;
+                });
+                setCars(updatedCars);
+              }}
             />
           );
         })}
         <AddCardDetails
           onAdd={(values: any) => {
-            console.log({ values });
+            setCars([...cars, values]);
           }}
         />
       </div>
