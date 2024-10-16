@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { AddCardDetails } from "../components/AddCardDetails";
 import CardDetailsCard from "../components/CardDetailsCard";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 const CarsPage = () => {
   const [cars, setCars] = useState([
     {
+      id: 1,
       name: "Lord Alto (😈)",
       carPhoto:
         "https://imgctcf.aeplcdn.com/thumbs/p-nc-p-s500-ver4/images/cars/generic/Maruti-Suzuki-Alto-Top-Used-Car-Under-One-Lakh-In-India.jpg",
@@ -24,7 +26,8 @@ const CarsPage = () => {
         {cars.map((car) => {
           return (
             <CardDetailsCard
-              key={car.name}
+              key={car.id}
+              id={car.id}
               name={car.name}
               carPhoto={car.carPhoto}
               description={car.description}

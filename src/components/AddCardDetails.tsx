@@ -6,6 +6,7 @@ export const AddCardDetails = ({ onAdd }) => {
   const [carPhoto, setCarPhoto] = useState(
     "https://stimg2.cardekho.com/images/carNewsimages/userimages/650X420/24509/1571988914835/GeneralNews.jpg"
   );
+  const [id, setId] = useState(2);
 
   console.log({
     carName: name,
@@ -16,6 +17,14 @@ export const AddCardDetails = ({ onAdd }) => {
   return (
     <div>
       <article className="relative isolate flex flex-col justify-center overflow-hidden rounded-2xl px-8 pb-8 max-w-sm mx-auto mt-24">
+        <label>Car Id</label>
+        <input
+          className="border-2 border-gray-300"
+          value={id}
+          onChange={(event) => {
+            setId(event.target.value);
+          }}
+        />
         <label>Car Name</label>
         <input
           className="border-2 border-gray-300"
@@ -50,6 +59,7 @@ export const AddCardDetails = ({ onAdd }) => {
               name,
               description,
               carPhoto,
+              id,
             });
           }}
         >
