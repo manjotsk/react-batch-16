@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import CarsPage from "./pages/CarsPage.tsx";
-import App from "./App.tsx";
 import AnimalPage from "./pages/AnimalPage.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarDetailsPage from "./pages/CarDetailsPage.tsx";

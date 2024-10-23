@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+import kukkad from "../assets/kukkad.jpg";
+import bhoond from "../assets/bhoond.jpg";
 
 function Header() {
   const location = useLocation();
@@ -10,7 +12,13 @@ function Header() {
       <nav className="flex justify-around items-center p-4 bg-white border-gray-950 border-b-[0.5px]">
         {/* Left Side: Logo */}
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="w-40" />
+          {location.pathname === "/cars" && (
+            <img src={bhoond} alt="Logo" className="w-40" />
+          )}
+
+          {location.pathname === "/animals" && (
+            <img src={kukkad} alt="Logo" className="w-40" />
+          )}
         </div>
 
         {/* Middle Links */}
