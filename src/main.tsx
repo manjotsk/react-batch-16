@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarDetailsPage from "./pages/CarDetailsPage.tsx";
 import NewPage from "./pages/NewPage.tsx";
 import SimpleLayout from "./layouts/SimpleLayout.tsx";
+import ConditionalRendering from "./pages/ConditionalRendering.tsx";
 
 const router = createBrowserRouter([
   {
@@ -31,8 +32,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-
-  {},
+  {
+    path: "/conditional-rendering",
+    element: <ConditionalRendering />,
+  },
 ]);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
