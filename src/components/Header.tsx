@@ -47,6 +47,14 @@ function Header() {
           >
             Animals
           </Link>
+          <Link
+            to="/users"
+            className={`hover:text-black ${
+              location?.pathname === "/users" ? "text-black" : ""
+            }`}
+          >
+            Users
+          </Link>
         </div>
 
         {/* Right Side: Buttons */}

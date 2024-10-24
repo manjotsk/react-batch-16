@@ -8,6 +8,7 @@ import CarDetailsPage from "./pages/CarDetailsPage.tsx";
 import NewPage from "./pages/NewPage.tsx";
 import SimpleLayout from "./layouts/SimpleLayout.tsx";
 import ConditionalRendering from "./pages/ConditionalRendering.tsx";
+import Users from "./pages/Users.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: "/animals",
         element: <AnimalPage />,
       },
+      {
+        path: "/users",
+        element: <Users />,
+      },
     ],
   },
   {
@@ -38,7 +43,5 @@ const router = createBrowserRouter([
   },
 ]);
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+  <RouterProvider router={router} />
 );
