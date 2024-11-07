@@ -9,6 +9,8 @@ import NewPage from "./pages/NewPage.tsx";
 import SimpleLayout from "./layouts/SimpleLayout.tsx";
 import ConditionalRendering from "./pages/ConditionalRendering.tsx";
 import Users from "./pages/Users.tsx";
+import PropDrilling from "./pages/concepts/PropDrilling.tsx";
+import GlobalState from "./pages/concepts/GlobalState.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "/users",
         element: <Users />,
+      },
+      {
+        path: "/concepts/prop-drilling",
+        element: <PropDrilling />,
+      },
+      {
+        path: "/concepts/global-state",
+        element: <GlobalState />,
       },
     ],
   },

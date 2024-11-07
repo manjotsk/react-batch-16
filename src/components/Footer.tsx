@@ -1,11 +1,15 @@
+import { useAtom } from "jotai";
 import { useLocation } from "react-router-dom";
+import { textAtom } from "../atoms/text.atom";
 
 function Footer() {
   const location = useLocation();
+  const [text] = useAtom(textAtom);
 
   console.log(location);
   return (
     <footer className="bg-white py-10 ">
+      {text}
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center">
           <div className="w-full md:w-1/4">
