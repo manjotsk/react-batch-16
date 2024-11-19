@@ -6,7 +6,9 @@ const SimpleLayout = () => {
   return (
     <div className="">
       <Header />
-      <Outlet />
+      <div className="h-screen">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

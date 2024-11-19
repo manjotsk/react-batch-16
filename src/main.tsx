@@ -11,6 +11,9 @@ import ConditionalRendering from "./pages/ConditionalRendering.tsx";
 import Users from "./pages/Users.tsx";
 import PropDrilling from "./pages/concepts/PropDrilling.tsx";
 import GlobalState from "./pages/concepts/GlobalState.tsx";
+import UseRefHook from "./pages/concepts/UseRefHook.tsx";
+import AudioPlayer from "./components/AudioPlayer.tsx";
+import AudioPage from "./pages/audioPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +27,6 @@ const router = createBrowserRouter([
         path: "/cars",
         element: <CarsPage />,
       },
-      // car details page
       {
         path: "/cars/:carId",
         element: <CarDetailsPage />,
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: "/concepts/global-state",
         element: <GlobalState />,
+      },
+      {
+        path: "/concepts/use-ref",
+        element: <UseRefHook />,
+      },
+      {
+        path: "/audio-page",
+        element: <AudioPage />,
       },
     ],
   },

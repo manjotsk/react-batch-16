@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AddCardDetails } from "../components/AddCardDetails";
 import CardDetailsCard from "../components/CardDetailsCard";
 import { useNavigate, useNavigation } from "react-router-dom";
+import { AddCardDetailsForm } from "../components/AddCardDetailsForm";
 
 const CarsPage = () => {
   const [cars, setCars] = useState([
@@ -40,7 +41,7 @@ const CarsPage = () => {
             />
           );
         })}
-        <AddCardDetails
+        <AddCardDetailsForm
           onAdd={(values: any) => {
             setCars([...cars, values]);
           }}

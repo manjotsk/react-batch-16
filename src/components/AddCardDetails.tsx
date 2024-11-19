@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// controlled data input
 export const AddCardDetails = ({ onAdd }) => {
   const [name, setName] = useState("Jonga");
   const [description, setDescription] = useState("The best jeep in the world");
