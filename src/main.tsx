@@ -14,6 +14,7 @@ import GlobalState from "./pages/concepts/GlobalState.tsx";
 import UseRefHook from "./pages/concepts/UseRefHook.tsx";
 import AudioPlayer from "./components/AudioPlayer.tsx";
 import AudioPage from "./pages/audioPage.tsx";
+import UseRefHook1 from "./pages/concepts/UseRefHook1.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/concepts/use-ref",
         element: <UseRefHook />,
+      },
+      {
+        path: "/concepts/use-ref-1",
+        element: <UseRefHook1 />,
       },
       {
         path: "/audio-page",
