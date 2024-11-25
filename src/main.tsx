@@ -15,6 +15,8 @@ import UseRefHook from "./pages/concepts/UseRefHook.tsx";
 import AudioPlayer from "./components/AudioPlayer.tsx";
 import AudioPage from "./pages/audioPage.tsx";
 import UseRefHook1 from "./pages/concepts/UseRefHook1.tsx";
+import App from "./App.tsx";
+import UseEffect from "./pages/concepts/UseEffect.tsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <NewPage />,
+      },
+      {
+        path: "/app",
+        element: <App />,
       },
       {
         path: "/cars",
@@ -47,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/concepts/global-state",
         element: <GlobalState />,
+      },
+      {
+        path: "/concepts/use-effect",
+        element: <UseEffect />,
       },
       {
         path: "/concepts/use-ref",
