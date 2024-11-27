@@ -13,14 +13,16 @@ import PropDrilling from "./pages/concepts/PropDrilling.tsx";
 import GlobalState from "./pages/concepts/GlobalState.tsx";
 import UseRefHook from "./pages/concepts/UseRefHook.tsx";
 import AudioPlayer from "./components/AudioPlayer.tsx";
-import AudioPage from "./pages/audioPage.tsx";
 import UseRefHook1 from "./pages/concepts/UseRefHook1.tsx";
 import App from "./App.tsx";
 import UseEffect from "./pages/concepts/UseEffect.tsx";
+import NotFound from "./pages/404.tsx";
+import AudioPage from "./pages/AudioPage.tsx";
 
 const router = createBrowserRouter([
   {
     element: <SimpleLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
