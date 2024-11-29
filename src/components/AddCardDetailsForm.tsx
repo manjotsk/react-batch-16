@@ -1,4 +1,12 @@
 import React, { useRef, useState } from "react";
+import * as Yup from "yup";
+
+const formSchema = Yup.object().shape({
+  id: Yup.string().required("Car id is required"),
+  name: Yup.string().required("Car name is required"),
+  description: Yup.string().required("Description is required"),
+  carPhoto: Yup.string().required("Car photo is required"),
+});
 
 // uncontrolled data input
 export const AddCardDetailsForm = ({ onAdd }) => {
@@ -8,23 +16,13 @@ export const AddCardDetailsForm = ({ onAdd }) => {
     const formData = new FormData(form.current);
     const data = Object.fromEntries(formData.entries());
 
-    if (!data.id) {
-      alert("Please enter a car id");
-      return false;
-    }
+    try {
+      formSchema.validateSync(data, {
+        abortEarly: false,
+      });
+    } catch (e) {
+      console.log(e);
 
-    if (!data.name) {
-      alert("Please enter a car name");
-      return false;
-    }
-
-    if (!data.description) {
-      alert("Please enter a car description");
-      return false;
-    }
-
-    if (!data.carPhoto) {
-      alert("Please enter a car photo");
       return false;
     }
 
