@@ -19,6 +19,7 @@ import UseEffect from "./pages/concepts/UseEffect.tsx";
 import NotFound from "./pages/404.tsx";
 import AudioPage from "./pages/AudioPage.tsx";
 import DragAndDrop from "./pages/concepts/DragAndDrop.tsx";
+import Memo from "./pages/concepts/Memo.tsx";
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "/concepts/drag-n-drop",
         element: <DragAndDrop />,
+      },
+      {
+        path: "/concepts/memo",
+        element: <Memo />,
       },
       {
         path: "/audio-page",

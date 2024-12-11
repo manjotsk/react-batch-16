@@ -97,6 +97,12 @@ function Header() {
               >
                 Use Effect
               </Link>
+              <Link
+                to={"/concepts/memo"}
+                className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+              >
+                Memo
+              </Link>
             </div>
           </div>
         </div>
